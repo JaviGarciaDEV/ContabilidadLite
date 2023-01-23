@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoInterfaces"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="Contabilidad Lite" Height="450" Width="800" Icon="icono.png">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF4EB0C5" Offset="1"/>
+            <GradientStop Color="#FF005F74"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        
+        <Image HorizontalAlignment="Left" Height="58" Margin="728,10,0,0" VerticalAlignment="Top" Width="54" Source="icono.png"/>
+        <Label Content="Contabilidad Lite" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" FontSize="22" Background="{x:Null}" FontFamily="Century Gothic" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="bienvenido"  Content="¡Bienvenido!" HorizontalAlignment="Left" Margin="26,23,0,0" VerticalAlignment="Top" FontSize="22" Background="{x:Null}" FontFamily="Century Gothic" FontWeight="Bold" Foreground="White"/>
+
     </Grid>
 </Window>
