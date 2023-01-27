@@ -1,22 +1,68 @@
 ﻿<Window x:Class="ProyectoInterfaces.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ProyectoInterfaces"
-        mc:Ignorable="d"
-        ResizeMode="NoResize"
-        Title="Contabilidad Lite" Height="450" Width="800" Icon="icono.png">
-    <Window.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF4EB0C5" Offset="1"/>
-            <GradientStop Color="#FF005F74"/>
-        </LinearGradientBrush>
-    </Window.Background>
-    <Grid>
-        <Image HorizontalAlignment="Left" Height="58" Margin="728,10,0,0" VerticalAlignment="Top" Width="54" Source="icono.png"/>
-        <Label Content="Contabilidad Lite" HorizontalAlignment="Left" Margin="26,60,0,0" VerticalAlignment="Top" FontSize="22" Background="{x:Null}" FontFamily="Century Gothic" FontWeight="Bold" Foreground="White"/>
-        <Label x:Name="bienvenido"  Content="¡Bienvenido!" HorizontalAlignment="Left" Margin="26,23,0,0" VerticalAlignment="Top" FontSize="22" Background="{x:Null}" FontFamily="Century Gothic" FontWeight="Bold" Foreground="White"/>
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:ProyectoInterfaces"
+		mc:Ignorable="d"
+		WindowStyle="None"
+		WindowStartupLocation="CenterOwner"
+		ResizeMode="NoResize"
+		MouseDown="Window_MouseDown"
+		Title="Contabilidad Lite" Height="450" Width="800" Icon="icono.png" Background="#FF1B1B1B">
 
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Background="#FF303030">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnMinimize"
+					BorderThickness="0"
+					Cursor="Hand"
+					Grid.Column="1"
+					Click="btnMinimize_Click">
+                    <Button.Foreground>
+                        <ImageBrush ImageSource="min.png"/>
+                    </Button.Foreground>
+                    <Button.Background>
+                        <ImageBrush ImageSource="min.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="btnClose"
+					BorderThickness="0"
+					Cursor="Hand"
+					Grid.Column="2"
+					Click="btnClose_Click" Margin="4,1,1,-1" Opacity="0.455">
+                    <Button.Background>
+                        <ImageBrush ImageSource="close.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Grid>
+
+        <Grid>
+            <Border CornerRadius="30"
+				Background="#FF303030"
+				BorderThickness="5" 
+				Margin="10,40,630,10">
+            </Border>
+
+            <Border CornerRadius="30"
+				Background="#FF303030"
+				BorderThickness="5" 
+				Margin="175,40,10,10">
+            </Border>
+        </Grid>
     </Grid>
 </Window>
