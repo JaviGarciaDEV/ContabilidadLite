@@ -45,7 +45,12 @@ namespace ProyectoInterfaces
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            WindowState = WindowState.Minimized;
+        }
 
+        private void ButtonCasa_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
         }
     }
 }

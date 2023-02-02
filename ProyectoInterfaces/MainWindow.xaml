@@ -9,7 +9,7 @@
 		WindowStartupLocation="CenterOwner"
 		ResizeMode="NoResize"
 		MouseDown="Window_MouseDown"
-		Title="Contabilidad Lite" Height="450" Width="800" Icon="icono.png" Background="#FF1B1B1B">
+		Title="Contabilidad Lite" Height="500" Width="800" Icon="icono.png" Background="#FF1B1B1B">
 
     <Grid>
         <Grid>
@@ -63,12 +63,101 @@
             <Border CornerRadius="30"
 				Background="#FF303030"
 				BorderThickness="5" 
-				Margin="175,40,10,10">
-                <Label Content="CONTABILIDAD LITE" Margin="193,17,192,328" Foreground="White" FontSize="22" FontWeight="Bold"/>
+				Margin="175,136,10,10">
             </Border>
-            <Image Margin="-34,62,574,314"
+            <Image Margin="6,82,621,334"
                        Source="icono.png"/>
-            <Button Height="100" Width="100" Margin="39,167,661,183" Content="CASA" Click="Button_Click" Foreground="White" FontWeight="Bold">
+            <Label Content="COMIDA" Margin="230,190,486,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Label Content="COCHE" Margin="358,190,356,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Label Content="LUZ,AGUA,GAS" Margin="486,190,192,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Label Content="ALQUILER" Margin="646,190,64,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Label Content="RESTANTE:" Margin="538,410,64,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15, 0, 0 , 0" Content="{TemplateBinding Content}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Label Content="INGRESOS:" Margin="230,410,372,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" Content="{TemplateBinding Content}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Button x:Name="botonCasa" Height="100" Width="100" Margin="39,167,661,183" Content="CASA" Click="ButtonCasa_Click" Foreground="White" FontWeight="Bold">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Template">
@@ -85,7 +174,7 @@
                 </Button.Style>
             </Button>
 
-            <Button Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White">
+            <Button IsEnabled="False" Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Template">
@@ -102,7 +191,7 @@
                 </Button.Style>
             </Button>
 
-            <Button Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold">
+            <Button IsEnabled="False" Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Template">
@@ -119,7 +208,7 @@
                 </Button.Style>
             </Button>
 
-            <Button Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White">
+            <Button IsEnabled="False" Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Template">
@@ -135,6 +224,8 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <Label Content="CONTABILIDAD LITE" HorizontalAlignment="Left" Margin="306,46,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontWeight="Bold"/>
+            <Label Content="CASA" HorizontalAlignment="Left" Margin="452,90,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold" Background="{x:Null}"/>
 
         </Grid>
 
