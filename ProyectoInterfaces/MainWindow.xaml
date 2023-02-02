@@ -52,17 +52,91 @@
         </Grid>
 
         <Grid>
+
             <Border CornerRadius="30"
 				Background="#FF303030"
 				BorderThickness="5" 
 				Margin="10,40,630,10">
+
             </Border>
 
             <Border CornerRadius="30"
 				Background="#FF303030"
 				BorderThickness="5" 
 				Margin="175,40,10,10">
+                <Label Content="CONTABILIDAD LITE" Margin="193,17,192,328" Foreground="White" FontSize="22" FontWeight="Bold"/>
             </Border>
+            <Image Margin="-34,62,574,314"
+                       Source="icono.png"/>
+            <Button Height="100" Width="100" Margin="39,167,661,183" Content="CASA" Click="Button_Click" Foreground="White" FontWeight="Bold">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
         </Grid>
+
     </Grid>
 </Window>
