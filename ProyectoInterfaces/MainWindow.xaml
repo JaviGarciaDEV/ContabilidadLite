@@ -64,6 +64,7 @@
 				Background="#FF303030"
 				BorderThickness="5" 
 				Margin="175,136,10,10">
+
             </Border>
             <Image Margin="6,82,621,334"
                        Source="icono.png"/>
@@ -127,21 +128,6 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label Content="RESTANTE:" Margin="538,410,64,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
-                <Label.Style>
-                    <Style TargetType="Label">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
-                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15, 0, 0 , 0" Content="{TemplateBinding Content}" />
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Label.Style>
-            </Label>
             <Label Content="INGRESOS:" Margin="230,410,372,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
@@ -157,75 +143,125 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Button x:Name="botonCasa" Height="100" Width="100" Margin="39,167,661,183" Content="CASA" Click="ButtonCasa_Click" Foreground="White" FontWeight="Bold">
-                <Button.Style>
-                    <Style TargetType="Button">
+            <Label Content="RESTANTE:" Margin="538,410,64,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
-                                        <ContentPresenter HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"/>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15, 0, 0 , 0" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
                     </Style>
-                </Button.Style>
+                </Label.Style>
+            </Label>
+            <Label Content="GASTO TOTAL:" Margin="538,364,64,107" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" Content="{TemplateBinding Content}" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Button x:Name="botonCasa" Height="100" Width="100" Margin="39,167,661,183" Content="CASA" Click="ButtonCasa_Click" Foreground="White" FontWeight="Bold">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF444444"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
 
             <Button IsEnabled="False" Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
-                                        <ContentPresenter HorizontalAlignment="Center"
-                                                VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF444444"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
 
             <Button IsEnabled="False" Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
-                                        <ContentPresenter HorizontalAlignment="Center"
-                                                VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF444444"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
 
             <Button IsEnabled="False" Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White">
-                <Button.Style>
-                    <Style TargetType="{x:Type Button}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
-                                        <ContentPresenter HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF444444"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
+
             <Label Content="CONTABILIDAD LITE" HorizontalAlignment="Left" Margin="306,46,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontWeight="Bold"/>
             <Label Content="CASA" HorizontalAlignment="Left" Margin="452,90,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold" Background="{x:Null}"/>
+            <Label x:Name="gastoTotal" Content="0" HorizontalAlignment="Left" Margin="660,364,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
+            
+            <TextBox x:Name="numIngresos" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="320,413,0,0" TextWrapping="Wrap" Text="1250" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            
+            <TextBox x:Name="gastoComida" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="230,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoCoche" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="358,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoLuz" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="486,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="122" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoAlquiler" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="646,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="90" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+
+            <Label x:Name="numRestante" Content="0" HorizontalAlignment="Left" Margin="660,410,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
+            <Label Content="€" HorizontalAlignment="Left" Margin="402,410,0,0" VerticalAlignment="Top" Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}"/>
+
+            <Button Margin="444,410,278,0" Content="CALCULAR" Click="ButtonCalcular_click" FontWeight="Bold" Foreground="White">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FF444444"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
 
         </Grid>
 
