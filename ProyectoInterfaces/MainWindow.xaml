@@ -66,7 +66,7 @@
 				Margin="175,136,10,10">
 
             </Border>
-            <Image Margin="6,82,621,334"
+            <Image Margin="16,66,643,319"
                        Source="icono.png"/>
             <Label Content="COMIDA" Margin="230,190,486,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
@@ -188,7 +188,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White">
+            <Button IsEnabled="False" Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -203,7 +203,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold">
+            <Button IsEnabled="False" Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -218,7 +218,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White">
+            <Button IsEnabled="False" Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
