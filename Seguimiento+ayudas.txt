@@ -10,3 +10,6 @@ copia del inicial ReadMe:
 Además de usar C# junto a XAML, para el desarrollo de su diseño de interfaz.
 Como indicación de proyecto y objetivo es bastante claro.
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+09/02/2023
+Renombra el proyecto en consonancia con su objetivo.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
