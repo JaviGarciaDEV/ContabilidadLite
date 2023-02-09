@@ -1,0 +1,12 @@
+#Profesor:
+-Este es el único fichero que voy a editar del proyecto, su función es para indicar pautas a seguir para su evaluación y 
+consejos para solucionar fallos o mofificar características para la adecuación de la nasignatura.
+-Cada pauta implicará una calificación.
+-Su eliminación implica la anulación del proyecto.
+-Sólo añadir texto encabezandolo con la fecha y delimitadores ++++
+
+09/02/2023
+copia del inicial ReadMe:
+Además de usar C# junto a XAML, para el desarrollo de su diseño de interfaz.
+Como indicación de proyecto y objetivo es bastante claro.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
