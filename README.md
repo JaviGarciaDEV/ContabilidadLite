@@ -8,6 +8,3 @@ Para ejecutarlo slo bastará con abrir el archivo .exe en la sección de release
 ### Si quieres saber más sobre este proyecto te recomiendo que le eches un vistazo a mi portfolio:
 https://javiportfolio.odoo.com
 
-# Profe:
-Además de usar C# junto a XAML, para el desarrollo de su diseño de interfaz.
-Como indicación de proyecto y objetivo es bastante claro.
