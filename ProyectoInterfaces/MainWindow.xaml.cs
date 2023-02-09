@@ -60,18 +60,27 @@ namespace ProyectoInterfaces
 
         private void ButtonCalcular_click(object sender, RoutedEventArgs e)
         {
-            int comida, luz, coche, alquiler, ingreso, restante, gasto;
-            ingreso = int.Parse(numIngresos.Text);
-            comida = int.Parse(gastoComida.Text);
-            luz = int.Parse(gastoLuz.Text);
-            coche = int.Parse(gastoCoche.Text);
-            alquiler = int.Parse(gastoAlquiler.Text);
+            try
+            {
+                int comida, luz, coche, alquiler, ingreso, restante, gasto;
+                ingreso = int.Parse(numIngresos.Text);
+                comida = int.Parse(gastoComida.Text);
+                luz = int.Parse(gastoLuz.Text);
+                coche = int.Parse(gastoCoche.Text);
+                alquiler = int.Parse(gastoAlquiler.Text);
 
-            gasto = comida + luz + coche + alquiler;
-            restante = ingreso - gasto;
+                gasto = comida + luz + coche + alquiler;
+                restante = ingreso - gasto;
 
-            numRestante.Content = restante.ToString();
-            gastoTotal.Content = gasto.ToString();
+                numRestante.Content = restante.ToString();
+                gastoTotal.Content = gasto.ToString();
+            }
+            catch
+            {
+                //Falta sacar mensaje por pantalla no por consola
+                Console.Write("Debes introducir numeros");
+            }
+            
 
         }
     }
