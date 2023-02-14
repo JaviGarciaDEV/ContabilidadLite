@@ -246,7 +246,8 @@
 
             <Label x:Name="numRestante" Content="0" HorizontalAlignment="Left" Margin="660,410,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
             <Label Content="€" HorizontalAlignment="Left" Margin="402,410,0,0" VerticalAlignment="Top" Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}"/>
-
+            <Label Content="" x:Name="textoError" HorizontalAlignment="Left" Margin="399,444,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="209"/>
+            
             <Button Margin="444,410,278,0" Content="CALCULAR" Click="ButtonCalcular_click" FontWeight="Bold" Foreground="White">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">

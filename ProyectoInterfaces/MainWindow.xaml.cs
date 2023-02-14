@@ -74,11 +74,11 @@ namespace ProyectoInterfaces
 
                 numRestante.Content = restante.ToString();
                 gastoTotal.Content = gasto.ToString();
+                textoError.Content = "";
             }
             catch
             {
-                //Falta sacar mensaje por pantalla no por consola
-                Console.Write("Debes introducir numeros");
+                textoError.Content = "Debes introducir numeros";
             }
             
 
