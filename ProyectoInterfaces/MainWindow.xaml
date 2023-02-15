@@ -1,4 +1,5 @@
 ﻿<Window x:Class="ProyectoInterfaces.MainWindow"
+        x:Name="ventana"
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -54,14 +55,18 @@
 
         <Grid>
 
-            <Border CornerRadius="30"
+            <Border 
+                x:Name="menu"
+                CornerRadius="30"
 				Background="#FF303030"
 				BorderThickness="5" 
 				Margin="10,40,630,10">
 
             </Border>
 
-            <Border CornerRadius="30"
+            <Border 
+                x:Name="contenedor"
+                CornerRadius="30"
 				Background="#FF303030"
 				BorderThickness="5" 
 				Margin="175,136,10,10">
@@ -69,13 +74,13 @@
             </Border>
             <Image Margin="16,66,643,319"
                        Source="icono.png"/>
-            <Label Content="COMIDA" Margin="230,190,486,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="comida" Content="COMIDA" Margin="230,190,486,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                    <Border x:Name="border" CornerRadius="5" Background="#FF1B1B1B">
                                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
@@ -84,13 +89,13 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label Content="COCHE" Margin="358,190,356,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="coche" Content="COCHE" Margin="358,190,356,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                    <Border x:Name="border" CornerRadius="5" Background="#FF1B1B1B">
                                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
@@ -99,13 +104,13 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label Content="LUZ,AGUA,GAS" Margin="486,190,192,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="luz" Content="LUZ,AGUA,GAS" Margin="486,190,192,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                    <Border x:Name="border" CornerRadius="5" Background="#FF1B1B1B">
                                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
@@ -114,13 +119,13 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label Content="ALQUILER" Margin="646,190,64,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="alquiler" Content="ALQUILER" Margin="646,190,64,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                    <Border x:Name="border" CornerRadius="5" Background="#FF1B1B1B">
                                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
@@ -129,13 +134,13 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label Content="INGRESOS:" Margin="230,410,372,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="ingresos" Content="INGRESOS:" Margin="230,410,372,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                    <Border x:Name="border" CornerRadius="5" Background="#FF1B1B1B">
                                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
@@ -144,13 +149,13 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label Content="RESTANTE:" Margin="538,410,64,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="restante" Content="RESTANTE:" Margin="538,410,64,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                    <Border x:Name="border" CornerRadius="5" Background="#FF1B1B1B">
                                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15, 0, 0 , 0" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
@@ -159,13 +164,13 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label Content="GASTO TOTAL:" Margin="538,364,64,107" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="gastoTotalCont" Content="GASTO TOTAL:" Margin="538,364,64,107" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="Label">
-                                    <Border CornerRadius="5" Background="#FF1B1B1B">
+                                    <Border x:Name="border" CornerRadius="5" Background="#FF1B1B1B">
                                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0" Content="{TemplateBinding Content}" />
                                     </Border>
                                 </ControlTemplate>
@@ -189,7 +194,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonOcio" Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -204,7 +209,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonFacturas" Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -219,7 +224,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonPagas" Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -234,7 +239,7 @@
                 </Button.Template>
             </Button>
 
-            <Button Margin="71,436,690,24" Click="Button_Theme" FontWeight="Bold" Background="Transparent" BorderThickness="0">
+            <Button x:Name="buttonTheme" Margin="71,436,690,24" Click="Button_Theme" FontWeight="Bold" Background="Transparent" BorderThickness="0">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
@@ -252,8 +257,8 @@
 
 
 
-            <Label Content="CONTABILIDAD LITE" HorizontalAlignment="Left" Margin="306,46,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontWeight="Bold"/>
-            <Label Content="CASA" HorizontalAlignment="Left" Margin="452,90,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold" Background="{x:Null}"/>
+            <Label x:Name="titulo" Content="CONTABILIDAD LITE" HorizontalAlignment="Left" Margin="306,46,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontWeight="Bold"/>
+            <Label x:Name="subtitulo" Content="CASA" HorizontalAlignment="Left" Margin="452,90,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold" Background="{x:Null}"/>
             <Label x:Name="gastoTotal" Content="0" HorizontalAlignment="Left" Margin="660,364,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
 
             <TextBox x:Name="numIngresos" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="320,413,0,0" TextWrapping="Wrap" Text="1250" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
@@ -267,7 +272,7 @@
             <Label Content="€" HorizontalAlignment="Left" Margin="402,410,0,0" VerticalAlignment="Top" Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}"/>
             <Label Content="" x:Name="textoError" HorizontalAlignment="Left" Margin="399,444,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="209"/>
 
-            <Button Margin="444,410,278,0" Content="CALCULAR" Click="ButtonCalcular_click" FontWeight="Bold" Foreground="White">
+            <Button x:Name="botonCalcular" Margin="444,410,278,0" Content="CALCULAR" Click="ButtonCalcular_click" FontWeight="Bold" Foreground="White">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
