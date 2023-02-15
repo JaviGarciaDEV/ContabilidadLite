@@ -103,5 +103,11 @@
   <ItemGroup>
     <Resource Include="close.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="temaoscuro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

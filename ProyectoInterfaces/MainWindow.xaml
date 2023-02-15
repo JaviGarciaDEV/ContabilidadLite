@@ -10,6 +10,7 @@
 		ResizeMode="NoResize"
 		MouseDown="Window_MouseDown"
 		Title="Contabilidad Lite" Height="500" Width="800" Icon="icono.png" Background="#FF1B1B1B">
+    
 
     <Grid>
         <Grid>
@@ -233,12 +234,30 @@
                 </Button.Template>
             </Button>
 
+            <Button Margin="71,436,690,24" Click="Button_Theme" FontWeight="Bold" Background="Transparent" BorderThickness="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Image x:Name="image" Source="tema.png" Stretch="UniformToFill"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="image" Property="Source" Value="temaoscuro.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+
+
+
             <Label Content="CONTABILIDAD LITE" HorizontalAlignment="Left" Margin="306,46,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontWeight="Bold"/>
             <Label Content="CASA" HorizontalAlignment="Left" Margin="452,90,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold" Background="{x:Null}"/>
             <Label x:Name="gastoTotal" Content="0" HorizontalAlignment="Left" Margin="660,364,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
-            
+
             <TextBox x:Name="numIngresos" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="320,413,0,0" TextWrapping="Wrap" Text="1250" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
-            
+
             <TextBox x:Name="gastoComida" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="230,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
             <TextBox x:Name="gastoCoche" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="358,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
             <TextBox x:Name="gastoLuz" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="486,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="122" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
@@ -247,7 +266,7 @@
             <Label x:Name="numRestante" Content="0" HorizontalAlignment="Left" Margin="660,410,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
             <Label Content="€" HorizontalAlignment="Left" Margin="402,410,0,0" VerticalAlignment="Top" Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}"/>
             <Label Content="" x:Name="textoError" HorizontalAlignment="Left" Margin="399,444,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="209"/>
-            
+
             <Button Margin="444,410,278,0" Content="CALCULAR" Click="ButtonCalcular_click" FontWeight="Bold" Foreground="White">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">

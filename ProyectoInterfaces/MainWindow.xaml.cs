@@ -83,5 +83,10 @@ namespace ProyectoInterfaces
             
 
         }
+
+        private void Button_Theme(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
