@@ -11,6 +11,7 @@
 		ResizeMode="NoResize"
 		MouseDown="Window_MouseDown"
 		Title="Contabilidad Lite" Height="500" Width="800" Icon="icono.png" Background="#FF1B1B1B">
+    
 
 
     <Grid>
