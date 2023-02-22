@@ -7,11 +7,11 @@
 		xmlns:local="clr-namespace:ProyectoInterfaces"
 		mc:Ignorable="d"
 		WindowStyle="None"
+        MinWidth="800"
+        MinHeight="500"
 		WindowStartupLocation="CenterOwner"
-		ResizeMode="NoResize"
 		MouseDown="Window_MouseDown"
 		Title="Contabilidad Lite" Height="500" Width="800" Icon="icono.png" Background="#FF1B1B1B">
-    
 
 
     <Grid>
@@ -55,27 +55,48 @@
         </Grid>
 
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="30*" />
+            </Grid.ColumnDefinitions>
 
             <Border 
+                Margin="20, 50, 0, 20"
+                Grid.Row="0"
+                Grid.RowSpan="5"
                 x:Name="menu"
                 CornerRadius="30"
 				Background="#FF303030"
-				BorderThickness="5" 
-				Margin="10,40,630,10">
+				BorderThickness="5" >
 
             </Border>
 
             <Border 
+                Margin="20, 50, 20, 20"
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.RowSpan="5"
+                Grid.ColumnSpan="4"
                 x:Name="contenedor"
                 CornerRadius="30"
 				Background="#FF303030"
 				BorderThickness="5" 
-				Margin="175,136,10,10">
+				>
 
             </Border>
-            <Image Margin="16,66,643,319"
-                       Source="icono.png"/>
-            <Label x:Name="comida" Content="COMIDA" Margin="230,190,486,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Image Grid.Row="0" Grid.Column="0" Margin="27,68,12,45" Source="icono.png" Grid.RowSpan="2"/>
+
+            <Label x:Name="comida" Content="COMIDA" Grid.Row="1" Grid.Column="4" Margin="30,30,50,30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -90,7 +111,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="coche" Content="COCHE" Margin="358,190,356,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="coche" Content="COCHE" FontSize="14" Grid.Row="1" Grid.Column="3" Margin="46,30,26,30" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" RenderTransformOrigin="1.186,0.538">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -105,7 +126,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="luz" Content="LUZ,AGUA,GAS" Margin="486,190,192,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="luz" Content="LUZ,AGUA,GAS" Grid.Row="1" Grid.Column="2" Margin="41,30,0,30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -120,7 +141,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="alquiler" Content="ALQUILER" Margin="646,190,64,281" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="alquiler" Content="ALQUILER" Grid.Row="1" Grid.Column="1" Margin="49,30,11,30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -180,7 +201,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Button x:Name="botonCasa" Height="100" Width="100" Margin="39,167,661,183" Content="CASA" Click="ButtonCasa_Click" Foreground="White" FontWeight="Bold">
+            <Button x:Name="botonCasa" Height="100" Width="100" Grid.Row="1" Grid.Column="0" Margin="39,63,19,34" Content="CASA" Click="ButtonCasa_Click" Foreground="White" FontWeight="Bold" Grid.RowSpan="2">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -195,7 +216,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" x:Name="botonOcio" Height="100" Width="100" Margin="39,231,661,119" Content="OCIO" FontWeight="Bold" Foreground="White" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonOcio" Height="100" Width="100" Grid.Row="2" Grid.Column="0" Margin="20,45,0,0" Content="OCIO" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -210,7 +231,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" x:Name="botonFacturas" Height="100" Width="100" Margin="39,295,661,55" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonFacturas" Height="100" Width="100" Grid.Row="3" Grid.Column="0" Margin="20,25,0,0" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -225,7 +246,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" x:Name="botonPagas" Height="100" Width="100" Margin="39,359,661,-9" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonPagas" Height="100" Width="100" Grid.Row="4" Grid.Column="0" Margin="20,0,0,0" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
