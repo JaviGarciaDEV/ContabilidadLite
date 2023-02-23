@@ -156,6 +156,9 @@ namespace ProyectoInterfaces
                 Image image = (Image)buttonTheme.Template.FindName("image", buttonTheme);
                 image.Source = new BitmapImage(new Uri("temaoscuro.png", UriKind.Relative));
 
+                //Cambio la barra
+                barra.Background = new SolidColorBrush(colorAzulContenedores);
+                btnClose.Opacity = 0.8;
             }
             else
             {
@@ -226,6 +229,10 @@ namespace ProyectoInterfaces
                 // Obtener la imagen actual
                 Image image = (Image)buttonTheme.Template.FindName("image", buttonTheme);
                 image.Source = new BitmapImage(new Uri("tema.png", UriKind.Relative));
+
+                //Cambio la barra
+                barra.Background = new SolidColorBrush(colorContenedores);
+                btnClose.Opacity = 0.455;
             }
 
         }
