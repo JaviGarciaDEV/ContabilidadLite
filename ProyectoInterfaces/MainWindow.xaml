@@ -9,7 +9,7 @@
 		WindowStyle="None"
         MinWidth="800"
         MinHeight="500"
-		WindowStartupLocation="CenterOwner"
+		WindowStartupLocation="CenterScreen"
 		MouseDown="Window_MouseDown"
 		Title="Contabilidad Lite" Height="500" Width="800" Icon="icono.png" Background="#FF1B1B1B">
 
@@ -56,24 +56,26 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="30*" />
-                <RowDefinition Height="30*" />
-                <RowDefinition Height="30*" />
-                <RowDefinition Height="30*" />
-                <RowDefinition Height="30*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30*" />
-                <ColumnDefinition Width="30*" />
-                <ColumnDefinition Width="30*" />
-                <ColumnDefinition Width="30*" />
-                <ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
             <Border 
                 Margin="20, 50, 0, 20"
                 Grid.Row="0"
-                Grid.RowSpan="5"
+                Grid.RowSpan="7"
                 x:Name="menu"
                 CornerRadius="30"
 				Background="#FF303030"
@@ -83,9 +85,9 @@
 
             <Border 
                 Margin="20, 50, 20, 20"
-                Grid.Row="0"
+                Grid.Row="1"
                 Grid.Column="1"
-                Grid.RowSpan="5"
+                Grid.RowSpan="7"
                 Grid.ColumnSpan="4"
                 x:Name="contenedor"
                 CornerRadius="30"
@@ -94,9 +96,9 @@
 				>
 
             </Border>
-            <Image Grid.Row="0" Grid.Column="0" Margin="27,68,12,45" Source="icono.png" Grid.RowSpan="2"/>
+            <Image Grid.Row="1" Grid.Column="0"  Source="icono.png" Margin="20,0,0,0"/>
 
-            <Label x:Name="comida" Content="COMIDA" Grid.Row="1" Grid.Column="4" Margin="30,30,50,30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="comida" Content="COMIDA" Grid.Row="2" Grid.Column="4" Height="25" Width="100" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -111,7 +113,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="coche" Content="COCHE" FontSize="14" Grid.Row="1" Grid.Column="3" Margin="46,30,26,30" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" RenderTransformOrigin="1.186,0.538">
+            <Label x:Name="coche" Content="COCHE" FontSize="14" Grid.Row="2" Grid.Column="3" Height="25" Width="100" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" RenderTransformOrigin="1.186,0.538">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -126,7 +128,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="luz" Content="LUZ,AGUA,GAS" Grid.Row="1" Grid.Column="2" Margin="41,30,0,30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="luz" Content="LUZ,AGUA,GAS" Grid.Row="2" Grid.Column="2" Height="25" Width="130" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -141,7 +143,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="alquiler" Content="ALQUILER" Grid.Row="1" Grid.Column="1" Margin="49,30,11,30" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="alquiler" Content="ALQUILER" Grid.Row="2" Grid.Column="1" Height="25" Width="100"  FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -156,7 +158,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="ingresos" Content="INGRESOS:" Margin="230,410,372,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="ingresos" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Width="250" Height="40" Content="INGRESOS:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -171,7 +173,9 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="restante" Content="RESTANTE:" Margin="538,410,64,61" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+
+
+            <Label x:Name="restante" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Width="250" Height="40" Content="RESTANTE:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -186,7 +190,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="gastoTotalCont" Content="GASTO TOTAL:" Margin="538,364,64,107" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="gastoTotalCont" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Width="250" Height="40" Content="GASTO TOTAL:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -201,7 +205,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Button x:Name="botonCasa" Height="100" Width="100" Grid.Row="1" Grid.Column="0" Margin="39,63,19,34" Content="CASA" Click="ButtonCasa_Click" Foreground="White" FontWeight="Bold" Grid.RowSpan="2">
+            <Button x:Name="botonCasa" Height="100" Width="100" Grid.Row="2" Grid.Column="0" Content="CASA" Click="ButtonCasa_Click" Foreground="White" FontWeight="Bold" Margin="20,20,0,0">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -216,7 +220,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" x:Name="botonOcio" Height="100" Width="100" Grid.Row="2" Grid.Column="0" Margin="20,45,0,0" Content="OCIO" FontWeight="Bold" Foreground="White" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonOcio" Height="100" Width="100" Grid.Row="3" Grid.Column="0" Margin="20,20,0,0" Content="OCIO" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -231,7 +235,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" x:Name="botonFacturas" Height="100" Width="100" Grid.Row="3" Grid.Column="0" Margin="20,25,0,0" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonFacturas" Height="100" Width="100" Grid.Row="4" Grid.Column="0" Margin="20,20,0,0" Content="FACTURAS" Click="Button_Click" Foreground="White" FontWeight="Bold" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -246,7 +250,7 @@
                 </Button.Template>
             </Button>
 
-            <Button IsEnabled="False" x:Name="botonPagas" Height="100" Width="100" Grid.Row="4" Grid.Column="0" Margin="20,0,0,0" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White" Opacity="0.5">
+            <Button IsEnabled="False" x:Name="botonPagas" Height="100" Width="100" Grid.Row="5" Grid.Column="0" Margin="20,20,0,0" Content="PAGAS" Click="Button_Click" FontWeight="Bold" Foreground="White" Opacity="0.5">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">
@@ -261,7 +265,7 @@
                 </Button.Template>
             </Button>
 
-            <Button x:Name="buttonTheme" Margin="71,436,690,24" Click="Button_Theme" FontWeight="Bold" Background="Transparent" BorderThickness="0">
+            <Button x:Name="buttonTheme" Height="40" Width="40" Grid.Row="6" Grid.Column="0" Click="Button_Theme" FontWeight="Bold" Background="Transparent" BorderThickness="0" Margin="70,0,48,30">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Grid>
@@ -279,22 +283,21 @@
 
 
 
-            <Label x:Name="titulo" Content="CONTABILIDAD LITE" HorizontalAlignment="Left" Margin="306,46,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontWeight="Bold"/>
-            <Label x:Name="subtitulo" Content="CASA" HorizontalAlignment="Left" Margin="452,90,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20" FontWeight="Bold" Background="{x:Null}"/>
-            <Label x:Name="gastoTotal" Content="0" HorizontalAlignment="Left" Margin="660,364,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
+            <Label x:Name="titulo" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Content="CONTABILIDAD LITE" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Label x:Name="gastoTotal" Content="0" Grid.Row="4" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
 
             <TextBox x:Name="numIngresos" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="320,413,0,0" TextWrapping="Wrap" Text="1250" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
 
-            <TextBox x:Name="gastoComida" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="230,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="84" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
-            <TextBox x:Name="gastoCoche" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="358,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
-            <TextBox x:Name="gastoLuz" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="486,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="122" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
-            <TextBox x:Name="gastoAlquiler" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="646,239,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="90" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoComida" Grid.Row="3" Grid.Column="4"  Margin="46,27,0,0" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoCoche" Grid.Row="3" Grid.Column="3"  Margin="46,27,0,0" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoLuz" Grid.Row="3" Grid.Column="2"  Margin="46,27,0,0" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoAlquiler" Grid.Row="3" Grid.Column="1"  Margin="46,27,0,0" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
 
-            <Label x:Name="numRestante" Content="0" HorizontalAlignment="Left" Margin="660,410,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
-            <Label Content="€" HorizontalAlignment="Left" Margin="402,410,0,0" VerticalAlignment="Top" Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}"/>
-            <Label Content="" x:Name="textoError" HorizontalAlignment="Left" Margin="399,444,0,0" VerticalAlignment="Top" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="209"/>
+            <Label x:Name="numRestante" Grid.Row="5" Grid.Column="4" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
+            <Label Content="€" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center"  Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}" Margin="0,20" Width="60"/>
+            <Label Content="" x:Name="textoError" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="209"/>
 
-            <Button x:Name="botonCalcular" Margin="444,410,278,0" Content="CALCULAR" Click="ButtonCalcular_click" FontWeight="Bold" Foreground="White">
+            <Button x:Name="botonCalcular" Grid.ColumnSpan="2" Grid.Row="6" Grid.Column="2" Height="100" Width="100" Content="CALCULAR" Click="ButtonCalcular_click" FontWeight="Bold" Foreground="White">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" CornerRadius="10" Background="#FF1B1B1B" Margin="0,0,0,60">

@@ -105,7 +105,6 @@ namespace ProyectoInterfaces
 
                 // Cambio color titulos
                 titulo.Foreground = brush;
-                subtitulo.Foreground = brush;
 
                 // Cambio color botones menu
                 brush = new SolidColorBrush(colorAzulBotones);
@@ -177,7 +176,6 @@ namespace ProyectoInterfaces
                 // Cambio color titulos
                 brush = new SolidColorBrush(colorTitulo);
                 titulo.Foreground = brush;
-                subtitulo.Foreground = brush;
 
                 // Cambio color botones menu
                 brush = new SolidColorBrush(colorBotones);
