@@ -52,7 +52,6 @@ namespace ProyectoInterfaces
 
         private void ButtonCasa_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -75,6 +74,18 @@ namespace ProyectoInterfaces
                 restante = ingreso - gasto;
 
                 numRestante.Content = restante.ToString();
+                //Si cantidad restante es negativa la muestra en rojo
+                var verde = (Color)ColorConverter.ConvertFromString("#FF37BF0E");
+                var rojo = (Color)ColorConverter.ConvertFromString("#FFCB1010");
+                if (restante < 0)
+                {
+                    numRestante.Foreground = new SolidColorBrush(rojo);
+                }
+                else
+                {
+                    numRestante.Foreground = new SolidColorBrush(verde);
+                }
+
                 gastoTotal.Content = gasto.ToString();
                 textoError.Content = "";
             }
@@ -159,6 +170,7 @@ namespace ProyectoInterfaces
                 //Cambio la barra
                 barra.Background = new SolidColorBrush(colorAzulContenedores);
                 btnClose.Opacity = 0.8;
+                imageMax.Opacity = 0.78;
             }
             else
             {
@@ -233,8 +245,14 @@ namespace ProyectoInterfaces
                 //Cambio la barra
                 barra.Background = new SolidColorBrush(colorContenedores);
                 btnClose.Opacity = 0.455;
+                imageMax.Opacity = 0.43;
             }
 
+        }
+
+        private void btnMaxmimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Maximized;
         }
     }
 }

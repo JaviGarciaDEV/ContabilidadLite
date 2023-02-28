@@ -26,6 +26,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="25"/>
                     <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
                     <ColumnDefinition Width="5"/>
                 </Grid.ColumnDefinitions>
 
@@ -33,7 +34,24 @@
 					BorderThickness="0"
 					Cursor="Hand"
 					Grid.Column="1"
-					Click="btnMinimize_Click">
+					Click="btnMinimize_Click" Margin="2,4,3,2">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseDirectlyOver" Value="True">
+                                    <Setter Property="Background" Value="Black"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="20" Height="20"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
                     <Button.Foreground>
                         <ImageBrush ImageSource="min.png"/>
                     </Button.Foreground>
@@ -42,11 +60,58 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="btnClose"
+                <Button x:Name="btnMaximize"
 					BorderThickness="0"
 					Cursor="Hand"
 					Grid.Column="2"
-					Click="btnClose_Click" Margin="4,1,1,-1" Opacity="0.455">
+					Click="btnMaxmimize_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseDirectlyOver" Value="True">
+                                    <Setter Property="Background" Value="Black"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="20" Height="20"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.Foreground>
+                        <ImageBrush ImageSource="max.png"/>
+                    </Button.Foreground>
+                    <Button.Background>
+                        <ImageBrush x:Name="imageMax" ImageSource="max.png" Opacity="0.43" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="btnClose"
+					BorderThickness="0"
+					Cursor="Hand"
+					Grid.Column="3"
+					Click="btnClose_Click" Margin="0,0,1,-1" Opacity="0.455">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseDirectlyOver" Value="True">
+                                    <Setter Property="Background" Value="Black"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="18" Height="18"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
                     <Button.Background>
                         <ImageBrush ImageSource="close.png" Stretch="Uniform"/>
                     </Button.Background>
@@ -293,7 +358,7 @@
             <TextBox x:Name="gastoLuz" Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
             <TextBox x:Name="gastoAlquiler" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
 
-            <Label x:Name="numRestante" Grid.Row="5" Grid.Column="4" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
+            <Label x:Name="numRestante" Grid.Row="5" Grid.Column="4" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
             <Label Content="€" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" Width="40" VerticalAlignment="Center"  Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}"/>
             <Label Content="" x:Name="textoError" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="#FFCB1010" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="209"/>
 
