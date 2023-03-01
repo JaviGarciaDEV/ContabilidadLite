@@ -9,6 +9,7 @@
 		WindowStyle="None"
         MinWidth="800"
         MinHeight="500"
+        ResizeMode="NoResize"
 		WindowStartupLocation="CenterScreen"
 		MouseDown="Window_MouseDown"
 		Title="Contabilidad Lite" Height="500" Width="800" Icon="icono.png" Background="#FF1B1B1B">
