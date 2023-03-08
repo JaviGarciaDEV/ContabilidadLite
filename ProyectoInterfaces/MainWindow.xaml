@@ -9,7 +9,8 @@
 		WindowStyle="None"
         MinWidth="800"
         MinHeight="500"
-        ResizeMode="NoResize"
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True"
 		WindowStartupLocation="CenterScreen"
 		MouseDown="Window_MouseDown"
 		Title="Contabilidad Lite" Height="500" Width="800" Icon="icono.png" Background="#FF1B1B1B">
@@ -164,7 +165,7 @@
             </Border>
             <Image Grid.Row="1" Grid.Column="0"  Source="icono.png" Margin="20,0,0,0"/>
 
-            <Label x:Name="comida" Content="COMIDA" Grid.Row="2" Grid.Column="4" Height="25" Width="100" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="comida" Content="COMIDA" Grid.Row="2" Grid.Column="4" Height="25" Width="100" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" Margin="0,0,25,0">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -209,7 +210,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="alquiler" Content="ALQUILER" Grid.Row="2" Grid.Column="1" Height="25" Width="100"  FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="alquiler" Content="ALQUILER" Grid.Row="2" Grid.Column="1" Height="25" Width="100"  FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" Margin="25,0,0,0">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -224,7 +225,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="ingresos" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Width="250" Height="40" Content="INGRESOS:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="ingresos" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Width="250" Height="40" Content="INGRESOS:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" Margin="25,0,0,0">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -241,7 +242,7 @@
             </Label>
 
 
-            <Label x:Name="restante" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Width="250" Height="40" Content="RESTANTE:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="restante" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Width="250" Height="40" Content="RESTANTE:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" Margin="0,0,25,0">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -256,7 +257,7 @@
                     </Style>
                 </Label.Style>
             </Label>
-            <Label x:Name="gastoTotalCont" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Width="250" Height="40" Content="GASTO TOTAL:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B">
+            <Label x:Name="gastoTotalCont" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Width="250" Height="40" Content="GASTO TOTAL:" FontSize="14" FontWeight="Bold" Foreground="White" Background="#FF1B1B1B" Margin="0,0,25,0">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Template">
@@ -354,10 +355,10 @@
 
             <TextBox x:Name="numIngresos" Grid.Row="5" Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="1250" VerticalAlignment="Center" Width="70" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
 
-            <TextBox x:Name="gastoComida" Grid.Row="3" Grid.Column="4" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoComida" Grid.Row="3" Grid.Column="4" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14" Margin="0,0,25,0"/>
             <TextBox x:Name="gastoCoche" Grid.Row="3" Grid.Column="3" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
             <TextBox x:Name="gastoLuz" Grid.Row="3" Grid.Column="2" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
-            <TextBox x:Name="gastoAlquiler" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14"/>
+            <TextBox x:Name="gastoAlquiler" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" TextAlignment="Center" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="86" TextChanged="TextBox_TextChanged" Background="#FF1B1B1B" BorderBrush="{x:Null}" Foreground="#FF37BF0E" FontWeight="Bold" FontSize="14" Margin="25,0,0,0"/>
 
             <Label x:Name="numRestante" Grid.Row="5" Grid.Column="4" Content="0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}" Width="55"/>
             <Label Content="€" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Left" Width="40" VerticalAlignment="Center"  Foreground="#FF37BF0E" FontSize="14" FontWeight="Bold" Background="{x:Null}"/>

@@ -153,9 +153,10 @@ namespace ProyectoInterfaces
         public void pintarAzul()
         {
             // Crear un nuevo SolidColorBrush con el color deseado
-            var colorFondo = (Color)ColorConverter.ConvertFromString("#FFFFFF");
-            var colorAzulContenedores = (Color)ColorConverter.ConvertFromString("#9ACAEE");
-            var colorAzulBotones = (Color)ColorConverter.ConvertFromString("#76AFD7");
+            var colorFondo = (Color)ColorConverter.ConvertFromString("#e1edf7");
+            var colorAzulContenedores = (Color)ColorConverter.ConvertFromString("#b5cee3");
+            var colorAzulBotones = (Color)ColorConverter.ConvertFromString("#ebf3fa");
+            var colorLetras = (Color)ColorConverter.ConvertFromString("#FF303030");
 
             // Cambio color fondo y contenedores
             var brush = new SolidColorBrush(colorFondo);
@@ -163,9 +164,6 @@ namespace ProyectoInterfaces
             brush = new SolidColorBrush(colorAzulContenedores);
             menu.Background = brush;
             contenedor.Background = brush;
-
-            // Cambio color titulos
-            titulo.Foreground = brush;
 
             // Cambio color botones menu
             brush = new SolidColorBrush(colorAzulBotones);
@@ -212,6 +210,24 @@ namespace ProyectoInterfaces
             gastoCoche.Background = brush;
             gastoLuz.Background = brush;
             gastoAlquiler.Background = brush;
+
+            //Cambio letras botones
+            brush = new SolidColorBrush(colorLetras);
+            botonCasa.Foreground = brush;
+            botonOcio.Foreground = brush;
+            botonFacturas.Foreground = brush;
+            botonPagas.Foreground = brush;
+            alquiler.Foreground = brush;
+            luz.Foreground = brush;
+            coche.Foreground = brush;
+            comida.Foreground = brush;
+            ingresos.Foreground = brush;
+            restante.Foreground = brush;
+            botonCalcular.Foreground = brush;
+            gastoTotalCont.Foreground = brush;
+
+            // Cambio color titulos
+            titulo.Foreground = brush;
 
             // Obtener la imagen actual
             Image image = (Image)buttonTheme.Template.FindName("image", buttonTheme);
@@ -287,6 +303,21 @@ namespace ProyectoInterfaces
             gastoCoche.Background = brush;
             gastoLuz.Background = brush;
             gastoAlquiler.Background = brush;
+
+            //Cambio letras botones
+            brush = new SolidColorBrush(colorTitulo);
+            botonCasa.Foreground = brush;
+            botonOcio.Foreground = brush;
+            botonFacturas.Foreground = brush;
+            botonPagas.Foreground = brush;
+            alquiler.Foreground = brush;
+            luz.Foreground = brush;
+            coche.Foreground = brush;
+            comida.Foreground = brush;
+            ingresos.Foreground = brush;
+            restante.Foreground = brush;
+            botonCalcular.Foreground = brush;
+            gastoTotalCont.Foreground = brush;
 
             // Obtener la imagen actual
             Image image = (Image)buttonTheme.Template.FindName("image", buttonTheme);
