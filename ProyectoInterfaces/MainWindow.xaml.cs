@@ -347,12 +347,14 @@ namespace ProyectoInterfaces
             // Comprobamos si el archivo existe
             if (!File.Exists(rutaArchivo))
             {
-                throw new FileNotFoundException($"El archivo {rutaArchivo} no existe.");
+                // Creamos el archivo si no existe
+                File.Create(rutaArchivo).Close();
             }
 
             // Leemos el contenido del archivo y lo devolvemos como un string
             return File.ReadAllText(rutaArchivo);
         }
+
 
     }
 }
